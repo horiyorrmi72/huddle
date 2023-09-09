@@ -29,9 +29,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/Screen%20Shot%202023-09-09%20at%2012.36.03.png)
-![](./images/Screenshot_2023-09-09%20Frontend%20Mentor%20Huddle%20landing%20page%20with%20single%20introductory%20section.png)
- 
+![](./images/Screen%20Shot%202023-09-09%20at%2012.36.03.png) 
+![](./images/Screenshot_2023-09-09%20Frontend%20Mentor%20Huddle%20landing%20page%20with%20single%20introductory%20section(1).png) 
+
 
 
 ### Links

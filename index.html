@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://kit.fontawesome.com/c2c240ba0d.js" crossorigin="anonymous" defer></script>
+
+  <title>Frontend Mentor | Huddle landing page with single introductory section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: hsl(257, 40%, 49%);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background-image: url(./images/bg-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      min-height: 100vh;
+    }
+
+    /* Header styles */
+    header {
+      padding-top: 15px;
+      padding-left: 30px;
+
+    }
+
+    .logo {
+      width: 150px;
+    }
+
+    /* Main content styles */
+    main {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-right: 10px;
+
+    }
+
+    .design_illustration {
+      flex: 1;
+      width: 90%;
+      position: relative;
+      left: 40px;
+      bottom: 15px;
+
+
+    }
+
+    .illustration {
+      width: 100%;
+      height: auto;
+      padding-bottom: 35px;
+      padding-right: 5px;
+    }
+
+    .data-en {
+      flex: 1;
+      max-width: 100%;
+      padding-top: 5px;
+      position: absolute;
+      bottom: 35%;
+      left: 55%;
+    }
+
+    .hero-header {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .hero-message {
+      font-size: 16px;
+      line-height: 1.5;
+      width: 80%;
+      color: white;
+    }
+
+    .register-btn {
+      background-color: white;
+      color: hsl(300, 69%, 71%);
+      width: 180px;
+      height: 50px;
+      border-radius: 25px;
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .register-btn:hover {
+      background-color: hsl(300, 69%, 71%);
+      color: aqua;
+    }
+
+
+    /* Spacer to create space between design and data */
+    .spacer {
+      width: 10px;
+      padding-left: 20px;
+    }
+
+    /* Social icons styles */
+    .social {
+      position: absolute;
+      bottom: 40px;
+      right: 100px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+    }
+
+    ul li {
+      margin-left: 10px;
+
+    }
+
+    i {
+      border: 1px solid aqua;
+      border-radius: 50%;
+    }
+
+    .icon-transparent {
+      background-color: transparent;
+      padding: 10px;
+    }
+
+    i:hover {
+      background-color: hsl(300, 69%, 71%);
+      border: 1px solid hsl(300, 69%, 71%);
+    }
+
+    @media (max-width: 375px) {
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        /* Ensure content takes at least the full viewport height */
+        width: 375px;
+      }
+
+      .container {
+        display: block;
+        background-color: hsl(257, 40%, 49%);
+        background-image: url(./images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        padding: 20px;
+        /* Add padding to the container */
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+      main {
+        /* max-width: 100%; */
+        /* background-color: #fff; */
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+
+
+      }
+
+      header {
+        padding-top: 10px;
+      }
+
+      .logo {
+        width: 120px;
+        position: absolute;
+        left: 40px;
+        bottom: 90%;
+      }
+
+      .design {
+        position: relative;
+        top: 95px;
+        right: 40px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .design_illustration {
+        width: 100%;
+        padding: 20px;
+        display: block;
+        position: relative;
+        /* left: 40px; */
+        bottom: 25px;
+        height: auto;
+      }
+
+      .illustration {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .data-en {
+        width: 100%;
+        display: block;
+        position: inherit;
+        padding-top: 50px;
+        text-align: center;
+        margin: 0 auto;
+        height: 300px;
+      }
+
+      .hero-header {
+        font-size: 18px;
+        line-height: 1.5em;
+        padding-top: 20px;
+      }
+
+      .hero-message {
+        font-size: 12px;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        padding-left: 20px;
+      }
+
+      .register-btn {
+        font-size: 14px;
+        width: 80%;
+      }
+      .social{
+        position: absolute;
+        bottom: -45px;
+        padding-right: 15px;
+        padding-top: 40px;
+        
+      }
+      .icon-transparent {
+        padding: 3px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <img src="images/logo.svg" alt="" class="logo">
+    </header>
+    <main>
+      <div class="design">
+        <div class="design_illustration">
+          <img src="images/illustration-mockups.svg" alt="" class="illustration">
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="data-en">
+        <h3 class="hero-header text">Build The Community <br>Your Fans Will Love</h3>
+
+        <p class="hero-message text">Huddle re-imagines the way we build communities. You have a voice, but so does your
+          audience.
+          Create connections with your users as you engage in genuine discussion. </p>
+        <button class="register-btn btn">
+          Register
+        </button>
+
+      </div>
+
+    </main>
+    <div class="social">
+      <ul>
+        <li><a href="https://www.facebook.com"><i class="fab fa-facebook fa-2x icon-transparent"></i></a></li>
+        <li><a href="https://www.twitter.com"><i class="fab fa-twitter fa-2x icon-transparent"></i></a></li>
+        <li><a href="https://www.instagram.com"><i class="fab fa-instagram fa-2x icon-transparent"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
