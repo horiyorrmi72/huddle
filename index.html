@@ -21,20 +21,21 @@
     body {
       font-family: sans-serif;
       background-color: hsl(257, 40%, 49%);
-      margin: 0;
-      padding: 0;
+      height: 100vh;
     }
 
     .container {
       background-image: url(./images/bg-desktop.svg);
       background-repeat: no-repeat;
       background-size: contain;
-      padding-left: 20px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: space-between;
-      min-height: 100vh;
+      max-width: 1440px;
+      height: auto;
+
     }
 
     /* Header styles */
@@ -51,7 +52,6 @@
     /* Main content styles */
     main {
       display: flex;
-      flex-direction: row;
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
@@ -125,7 +125,7 @@
     /* Social icons styles */
     .social {
       position: absolute;
-      bottom: 40px;
+      bottom: 5px;
       right: 100px;
     }
 
@@ -149,47 +149,99 @@
       background-color: transparent;
       padding: 10px;
     }
-
+    
     i:hover {
       background-color: hsl(300, 69%, 71%);
       border: 1px solid hsl(300, 69%, 71%);
     }
 
-    @media (max-width: 375px) {
-      body {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: auto;
-        /* Ensure content takes at least the full viewport height */
-        width: 375px;
-      }
-
+    @media (max-width: 920px) {
       .container {
-        display: block;
-        background-color: hsl(257, 40%, 49%);
         background-image: url(./images/bg-mobile.svg);
         background-repeat: no-repeat;
         background-size: contain;
-        width: 100%;
-        padding: 20px;
-        /* Add padding to the container */
-        text-align: center;
-        align-items: center;
-        justify-content: center;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-content: center;
+        overflow-x: hidden;
+     }
 
+      header {
+        padding-top: 5px;
+        padding-left: 30px;
+        margin-bottom: 40px;
+        margin-left: 35px;
       }
 
       main {
-        /* max-width: 100%; */
-        /* background-color: #fff; */
-        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-right: 10px;
+        width: 100%;
+      }
+      .design_illustration {
+        flex: 1;
+        width: 100%;
+        position: relative;
+        left: 15px;
+        bottom: 15px;
+      }
+
+      .illustration {
+        width: 100%;
+        padding-bottom: 35px;
+        padding-right: 5px;
+      }
+
+      .data-en {
+        width: 50%;
+        position: relative;
+        left: 10%;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        padding-right: 40px;
+        margin-right:50px;
+      }
+      .hero-header, .hero-message{
+        margin: 20px auto ;
+      }
+      .hero-header {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: white;
+      /* text-align: center; */
+    }
+    .hero-message {
+      font-size: 16px;
+      line-height: 1.5;
+      width: 80%;
+      color: white;
+      /* text-align: center; */
+    }
+    .social{
+      width:100%;
+      position: relative;
+      top: 10%;
+      left: 80%;
+      margin-top: 50px;
+      
+    }
+    }
+
+    @media (max-width: 564px) {
+      .container {
+        background-image: url('./images/bg-mobile.svg');
+        background-repeat: no-repeat;
+
+      }
+
+
+      main {
         justify-content: center;
         align-items: center;
-
-
       }
 
       header {
@@ -199,39 +251,36 @@
       .logo {
         width: 120px;
         position: absolute;
-        left: 40px;
+        left: 45px;
         bottom: 90%;
       }
 
       .design {
         position: relative;
-        top: 95px;
-        right: 40px;
+        top: 120px;
+        right: 30px;
         width: 100%;
-        margin: 0 auto;
+        margin: 5px auto;
+        height: auto;
       }
 
       .design_illustration {
         width: 100%;
-        padding: 20px;
+        padding: 10px;
         display: block;
         position: relative;
-        /* left: 40px; */
-        bottom: 25px;
-        height: auto;
+
       }
 
       .illustration {
         width: 100%;
-        display: block;
         margin: 0 auto;
       }
 
       .data-en {
         width: 100%;
-        display: block;
         position: inherit;
-        padding-top: 50px;
+        padding-top: 120px;
         text-align: center;
         margin: 0 auto;
         height: 300px;
@@ -240,7 +289,7 @@
       .hero-header {
         font-size: 18px;
         line-height: 1.5em;
-        padding-top: 20px;
+        padding-top: 0px;
       }
 
       .hero-message {
@@ -255,15 +304,116 @@
         font-size: 14px;
         width: 80%;
       }
-      .social{
-        position: absolute;
-        bottom: -45px;
-        padding-right: 15px;
-        padding-top: 40px;
-        
+
+      .social {
+        position: relative;
+        left: 40%;
+        right: 40%;
+        align-items: center;
       }
+
       .icon-transparent {
         padding: 3px;
+      }
+
+      i:hover {
+        background-color: hsl(300, 69%, 71%);
+        border: 1px solid hsl(300, 69%, 71%);
+      }
+
+    }
+
+    @media (max-width: 375px) {
+      .container {
+        background-image: url('./images/bg-mobile.svg');
+        background-repeat: no-repeat;
+        flex-wrap: wrap;
+      
+      }
+
+      .design {
+        width: 100%;
+        position: relative;
+        top: 30px;
+        right: 30px;
+        /* margin: 5px auto; */
+        height: auto;
+      }
+
+      .design_illustration {
+        width: 90%;
+        padding: 35px;
+        display: block;
+        position: relative;
+
+      }
+
+      .data-en {
+        width: 100%;
+        position: relative;
+        bottom: 150px;
+        left: 0px;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        height: 300px;
+  
+      }
+
+      .hero-header {
+        font-size: 18px;
+        line-height: 1.5em;
+        width: 85%;
+      }
+
+      .hero-message {
+        font-size: 13px;
+        width: 235px;
+        padding: 5px;
+      }
+
+      .register-btn {
+        width: 60%;
+        height: 40px;
+        text-align: center;
+        font-size: 12px;
+        position: relative;
+        bottom: 25px;
+
+      }
+
+      .social {
+        display: flex;
+        position: relative;
+        bottom: 200px;
+        list-style: none;
+        padding: 0;
+        display: flex;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        width: 10px;
+      }
+
+      li {
+        margin-left: 10px;
+        margin-right: 20px;
+        width: 50%;
+        padding-right: 10px;
+      }
+
+      .icon-transparent {
+        padding: 2px;
+        position: relative;
+        right: 30px;
+      }
+
+      i:hover {
+        background-color: hsl(300, 69%, 71%);
+        border: 1px solid hsl(300, 69%, 71%);
       }
 
     }
